@@ -48,10 +48,10 @@ class Manager:
             f"{RESOLVER_PATH}/N{len(self.estado_inicial)}{self.pagina}/{''.join(self.estado_inicial)}"
         )
 
-    def generar_red(self, dimensiones: int, datos_discretos: bool = True) -> str:
+    def generar_red(self, dimensiones: int, datos_discretos: bool = False) -> str:
         np.random.seed(aplicacion.semilla_numpy)
 
-        if dimensiones < 1:
+        if dimensiones < 1: 
             raise ValueError("Las dimensiones deben ser positivas")
 
         # Calcular tamaño y tiempo estimado

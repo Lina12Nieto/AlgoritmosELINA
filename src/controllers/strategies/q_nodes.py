@@ -210,7 +210,7 @@ class QNodes(SIA):
             emd_particion_candidata = INFTY_POS
 
             for j in range(len(deltas_ciclo) - 1):
-                self.logger.critic(f"   >{j=}")
+                # self.logger.critic(f"   >{j=}")
                 emd_local = 1e5
                 indice_mip: int
 
@@ -227,7 +227,7 @@ class QNodes(SIA):
                     emd_particion_candidata = emd_delta
                     dist_particion_candidata = dist_marginal_delta
                     ...
-                self.logger.critic(f"       [k]: {indice_mip}")
+                # self.logger.critic(f"       [k]: {indice_mip}")
 
                 omegas_ciclo.append(deltas_ciclo[indice_mip])
                 deltas_ciclo.pop(indice_mip)
